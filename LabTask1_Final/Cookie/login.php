@@ -1,0 +1,26 @@
+<?php
+      $uname="";
+	  $pass="";
+	 if ($_SERVER["REQUEST_METHOD"]=="POST")
+	 {
+            $uname=$_POST ["uname"];
+            $pass=$_POST ["pass"];
+			
+			if($uname=="shah" && $pass=="1657571")
+			{
+					setcookie("user",$uname,time()+60,"/");
+					header("Location:dashboard.php");
+			}
+	 }
+?>
+
+
+<html>
+   <body>
+        <form method="post">
+            <input type="text" name="uname" Placeholder="username"><br>
+            <input type="password" name="pass" placeholder="password"><br>
+             <input type="submit" value="Submit">
+         </form>
+    </body>
+</html>
